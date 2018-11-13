@@ -11,14 +11,20 @@ export default (sequelize, DataType) => {
             },
         },
         name: DataType.STRING,
-        cpf_cnpj: DataType.DECIMAL(11, 0),
+        cpf_cnpj:{
+            type: DataType.DECIMAL(11, 0),
+            unique: true
+        }, 
         rg: DataType.STRING,
         documment: DataType.STRING,
         adress: DataType.STRING,
         number: DataType.STRING,
         neighborhood: DataType.STRING,
-        cep: DataType.STRING
-       
+        cep: DataType.STRING,
+        id_cities: { 
+            type: DataType.INTEGER,
+             
+        },
     },
         {
             tableName: 'people',
